@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    /*CONFIGURAÇÃO DA PAG*/
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    transition: 1s all;
+}
+
+body{
+    background-color: #0D1A3E   ;
+    overflow-x: hidden;
+}
+
+/*INICIO DO HEADER*/
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0F2546;
+    height: 30vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    width: 100vw;
+    height: 10vh;
+    transition: 2s all;
+    background-color: #070e21;
+    opacity: 0.8; /* 80% opacidade */
+
+}
+
+.menu>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 1s all;
+}
+
+.menu >a::after{
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.8s all;
+}
+
+.menu >a:hover::after{
+    width: 100%;
+}
+.menu>a:hover {
+    transform: scale(1.05   );
+}
+
+
+/*FIM DO HEADER*/
+
+/*comeco do main*/
+
+.galeria {
+    /*tela1 - div de todas as fotos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.foto1>img {
+    /*tela1 - foto maior*/
+    width: 490px;
+    margin-right: 50px;
+}
+
+.gallery {
+    /*tela1 - fotos menores*/
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    ;
+}
+
+.gallery>img {
+    /*tela1 - tamanho das fotos menores*/
+    width: 220px;
+}
+
+.galeria2 {
+    /*tela2 - div de todas as fotos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 150px;
+}
+
+.gallery2 {
+    /*tela2 - fotos menores*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery2>img {
+    /*tela2 - fotos menores tamanho*/
+    width: 300px;
+}
+
+.foto2>img {
+    /*tela2 - foto maior tamanho*/
+    width: 600px;
+}
+
+/*fim do main*/
+
+/*FOOTER*/
+.rodape {
+    /*configurando o footer*/
+    height: 40vh;
+    width: 100vw;
+    background: #070e21;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    /*icones do x,instagram e face*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+.icons>img {
+    /*tamanho dos icons*/
+    width: 40px;
+}
+
+.img-footer {
+    /*logotipo*/
+    margin-right: 180px;
+}
+
+.txt-footer {
+    /*slogan*/
+    position: relative;
+    right: 100px;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.caixa {
+    /*background azul*/
+    height: 10vh;
+    background-color: #0A0F1A;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/*FIM DO FOOTER*/
+
+/*responsividade*/
+@media only screen and (max-width: 815px) {
+
+    /*celulares maiores*/
+    .menu {
+        gap: 80px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .gallery>img {
+        width: 360px;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .gallery2 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .galeria2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+        gap: 50px;
+        height: auto;
+    }
+
+    .gallery2>img {
+        width: 400px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        height: 60vh;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-footer {
+        margin-right: 0;
+    }
+
+    .txt-footer {
+        position: relative;
+        right: 0;
+        left: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        width: 100vw;
+        gap: 75px;
+    }
+
+    .menu>a {
+        font-size: 20px;
+    }
+
+    .foto2>img {
+        width: 540px;
+    }
+}
+
+@media only screen and (max-width: 466px) {
+
+    /*celulares*/
+    .menu {
+        width: 100vw;
+        gap: 25px;
+    }
+
+    .menu>a {
+        font-size: 20px;
+    }
+
+    .foto1>img {
+        width: 480px;
+    }
+
+    .foto2>img {
+        width: 480px;
+    }
+}
